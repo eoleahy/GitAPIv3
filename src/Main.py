@@ -1,21 +1,29 @@
 from github import Github
+from flask import Flask, render_template,request
 import getpass  #no show password
 import json     #json for data
 import webbrowser #open web page
 import os       #get cwd
 
+app = Flask(__name__)
 
 # using username and password
-def main():
+@app.route('/',methods=['POST','GET'])
+def home():
+    errors=[]
+    results={}
 
-    webPage = 'src/socialGraph.html'
+    if request.method == "POST":
+        username = request.form['username']
+        pswd = request.form['password']
 
-    filename= 'file:///' +os.getcwd()+'/' + webPage
-    print("Opening", filename, "in browser")
-        webbrowser.open_new_tab(filename)
+        handle_input(username,pswd)
 
-    username = input('Username:')
-    pswd = getpass.getpass('Password:')
+    return render_template('socialGraph.html',errors=errors,results=results)
+
+
+def handle_input(username,pswd):
+
     g = Github(username,pswd)
     user = g.get_user()
 
@@ -81,11 +89,8 @@ def main():
     with open('src/data.json','w') as outfile:
         json.dump(json_arr, outfile)
 
-    if(input('Press q to close: ') is 'q'):
-        exit()
-
-
-
 
 if __name__ == '__main__':
-    main()
+    print("Opening in browser")
+    webbrowser.open_new_tab("http://localhost:5000")
+    app.run()
