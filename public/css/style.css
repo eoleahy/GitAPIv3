@@ -1,0 +1,105 @@
+.header {
+    margin-top: -10px;
+    margin-right: -10px;
+    padding: 40px;
+    text-align: center;
+    background: #444444;
+    color: white;
+    font-size: 30px;
+}
+
+.sidenav {
+    height: 100%;
+
+    width: 160px;
+
+    position: fixed;
+
+    z-index: 1;
+
+    top: 0;
+
+    left: 0;
+    background-color: #111;
+
+    overflow-x: hidden;
+
+    padding-top: 20px;
+}
+
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 160px;
+
+    padding: 0px 10px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+
+.container {
+    position: relative;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px 0 30px 0;
+    width: 25%;
+}
+
+
+input,
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+
+}
+
+input:hover,
+.btn:hover {
+    opacity: 1;
+}
+
+input[type=submit] {
+    background-color: #4E574E;
+    color: white;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #414942;
+}
+
+
+.col {
+    float: left;
+    margin: auto;
+    padding: 0 50px;
+    margin-top: 6px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "gitinterrogator",
+  "version": "1.0.0",
+  "description": "\"\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eoleahy1/GitInterrogator.git"
+  },
+  "author": "eoleahy1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eoleahy1/GitInterrogator/issues"
+  },
+  "homepage": "https://github.com/eoleahy1/GitInterrogator#readme",
+  "dependencies": {
+    "connect": "^3.6.6",
+    "express": "^4.16.4"
+  }
+}
